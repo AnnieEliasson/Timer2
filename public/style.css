@@ -55,10 +55,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  color: #FFFFFF;
 }
 .set-timer-page .set-timer {
   font-size: 3rem;
+  margin-top: 260px;
+}
+.set-timer-page .set-timer .minutes {
+  font-size: 4rem;
+}
+.set-timer-page .set-timer .left-arrow,
+.set-timer-page .set-timer .right-arrow {
+  cursor: pointer;
+  margin: 20px;
 }
 .set-timer-page .checkboxes {
   margin-top: 100px;

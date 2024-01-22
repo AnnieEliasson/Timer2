@@ -5,15 +5,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    color: $text-color;
+
 
     .set-timer{
         font-size: 3rem;
+        margin-top: 260px;
+
+
+        .minutes{
+            font-size: 4rem;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            cursor: pointer;
+            margin: 20px;
+        }
     }
 
     .checkboxes{
         margin-top: 100px;
-
     }
 
     .start-btn{
