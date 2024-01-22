@@ -53,7 +53,6 @@ export function timer(){
         timer()
       })
     } else{
-      //viewTimePage.style.display = "none";
       alarmPage()
       clearInterval(timerInterval);
     }
