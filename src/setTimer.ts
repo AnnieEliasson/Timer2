@@ -5,6 +5,7 @@ const rightBtn = document.querySelector(".right-arrow") as HTMLElement
 const displayMinutes = document.querySelector(".minutes") as HTMLElement
 const startBtn = document.querySelector(".start-btn") as HTMLElement
 const viewTimePage = document.querySelector(".view-time-page") as HTMLElement
+export const setTimerPage = document.querySelector(".set-timer-page") as HTMLElement
 export let minutes: number = 10;
 
 
@@ -20,7 +21,14 @@ rightBtn.addEventListener('click', ()=>{
 })
 
 startBtn.addEventListener('click', ()=>{
-    viewTimePage.style.display = "flex"
+    setTimerPage.style.transform = "translateY(-100%)"
+    viewTimePage.style.transform = "translateY(0)"
+    //viewTimePage.classList.add('slide-up') 
+
+    //viewTimePage.style.display = "flex"
+    
+
+    
     timer();
 } )
 }

@@ -6,6 +6,8 @@
     gap: 15px;
     color: $text-color;
     z-index: 1;
+    transition: transform 0.7s;
+    
 
     .logo{
         width: 100px;
@@ -43,3 +45,5 @@
 
     }
 }
+
+

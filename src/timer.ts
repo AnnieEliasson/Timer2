@@ -1,9 +1,9 @@
-import {  minutes } from "./setTimer.js";
+import {  minutes, setTimerPage } from "./setTimer.js";
 import { alarmPage } from "./alarmpage.js";
 
 const breakScreen = document.querySelector(".break") as HTMLElement
 let abort = false;
-const viewTimePage = document.querySelector(".view-time-page") as HTMLElement
+export const viewTimePage = document.querySelector(".view-time-page") as HTMLElement
 const intervalBox = document.getElementById("intervals") as HTMLInputElement
 const breakBox = document.getElementById("break") as HTMLInputElement
 const breakBtn = document.querySelector(".break-btn") as HTMLElement
@@ -12,6 +12,9 @@ const abortBtn = document.querySelector(".abort-btn") as HTMLElement
 
 abortBtn.addEventListener('click', ()=>{
     abort = true;
+
+    setTimerPage.style.transform = "translateY(0)"
+    viewTimePage.style.transform = "translateY(100%)"
   })
 
 
@@ -29,7 +32,8 @@ export function timer(){
   if (abort === true){
     abort = false;
     clearInterval(timerInterval);
-    viewTimePage.style.display = "none";
+    //viewTimePage.style.display = "none";
+
   }
   
   if (timeLimitInSeconds === 0) {
@@ -49,7 +53,7 @@ export function timer(){
         timer()
       })
     } else{
-      viewTimePage.style.display = "none";
+      //viewTimePage.style.display = "none";
       alarmPage()
       clearInterval(timerInterval);
     }
