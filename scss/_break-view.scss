@@ -1,0 +1,71 @@
+
+.break {
+    @include fill-position-screen;
+    @include flex-col-center-center;
+    background-color: $grey1;
+    color: $text-color;
+    display: none;
+    overflow: hidden;
+
+    div{
+        @include flex-col-center-center;
+        background-color: $grey2;
+        width: $circle-width * 3;
+        height: $circle-height * 3;
+        border-radius: 50%;
+
+        div{
+            @include flex-col-center-center;
+            background-color: $grey3;
+            width: $circle-width * 2.2;
+            height: $circle-height * 2.2;
+            border-radius: 50%;
+
+            div{
+                @include flex-col-center-center;
+                background-color: $grey4;
+                width: $circle-width * 1.5;
+                height: $circle-height * 1.5;
+                border-radius: 50%;
+
+                div{
+                    @include flex-col-center-center;
+                    background-color: $grey5;
+                    width: $circle-width;
+                    height: $circle-height;
+                    border-radius: 50%;
+                    
+
+                    span{
+                        font-size: 8rem;
+                    }
+                }
+                
+            }
+
+        }
+    }
+
+    
+h2 {
+    position: absolute;
+    font-size: 2rem;
+    top: 400px;
+}
+
+.break-btn {
+    @include button;
+}
+    
+}
+
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

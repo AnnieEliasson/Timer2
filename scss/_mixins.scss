@@ -1,0 +1,29 @@
+@mixin fill-position-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex-col-center-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button {
+    padding: 10px 20px;
+    margin-top: 50px;
+    background-color: transparent;
+    font-size: 1rem;
+    border: 1px solid $btn-color;
+    border-radius: 3px;
+    color: $btn-color;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+}
+

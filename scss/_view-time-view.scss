@@ -1,0 +1,15 @@
+.view-time-page {
+    @include fill-position-screen;
+    @include flex-col-center-center;
+    background-color: rgb(232, 230, 230);
+    display: none;
+
+        #time-display {
+            font-size: 6rem;
+            font-family: sans-serif;
+        }
+
+        .abort-btn{
+            @include button;
+        }
+}

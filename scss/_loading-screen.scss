@@ -1,0 +1,45 @@
+
+.loadingscreen {
+    @include fill-position-screen;
+    background-color: $grey1;
+    @include flex-col-center-center;
+    gap: 15px;
+    color: $text-color;
+    z-index: 1;
+
+    .logo{
+        width: 100px;
+        height: 100px;
+        background-color: $grey1;
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr 4fr;
+
+        gap: 10px;
+
+        div{
+            height: 100%;
+            width: 1fr;
+            background-color: $text-color;
+        }
+
+        div{
+            height: 100%;
+            width: 2fr;
+            background-color: $text-color;
+        }
+
+        div{
+            height: 100%;
+            width: 3fr;
+            background-color: $text-color;
+        }
+
+        div{
+            height: 100%;
+            width: 4fr;
+            background-color: $text-color;
+        }
+
+
+    }
+}
