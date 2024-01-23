@@ -265,6 +265,12 @@
   font-size: 2rem;
   top: 400px;
 }
+.break .break-countdown {
+  position: absolute;
+  top: 450px;
+  margin-bottom: 150px;
+  font-size: 1.7rem;
+}
 .break .break-btn {
   padding: 10px 20px;
   margin-top: 50px;

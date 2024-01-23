@@ -1,5 +1,6 @@
 import { minutes, setTimerPage } from "./setTimer.js";
 import { alarmPage } from "./alarmpage.js";
+import { breakTimer } from "./breaktimer.js";
 const breakScreen = document.querySelector(".break");
 let abort = false;
 export const viewTimePage = document.querySelector(".view-time-page");
@@ -35,9 +36,10 @@ export function timer() {
                 clearInterval(timerInterval);
                 console.log("break");
                 breakScreen.style.display = "flex";
-                const breakTimer = setTimeout(timer, 3000);
+                //const breakTimer = setTimeout(timer, 3000)
+                breakTimer();
                 breakBtn.addEventListener('click', () => {
-                    clearTimeout(breakTimer);
+                    //clearTimeout(breakTimer)
                     timer();
                 });
             }

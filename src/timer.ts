@@ -1,5 +1,6 @@
 import {  minutes, setTimerPage } from "./setTimer.js";
 import { alarmPage } from "./alarmpage.js";
+import {breakTimer} from "./breaktimer.js";
 
 const breakScreen = document.querySelector(".break") as HTMLElement
 let abort = false;
@@ -46,10 +47,12 @@ export function timer(){
       console.log("break")
       breakScreen.style.display = "flex"
   
-      const breakTimer = setTimeout(timer, 3000)
-  
+      //const breakTimer = setTimeout(timer, 3000)
+      
+
+      breakTimer();
       breakBtn.addEventListener('click', ()=>{
-        clearTimeout(breakTimer)
+        //clearTimeout(breakTimer)
         timer()
       })
     } else{
