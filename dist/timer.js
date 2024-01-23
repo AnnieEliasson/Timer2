@@ -38,10 +38,6 @@ export function timer() {
                 breakScreen.style.display = "flex";
                 //const breakTimer = setTimeout(timer, 3000)
                 breakTimer();
-                breakBtn.addEventListener('click', () => {
-                    //clearTimeout(breakTimer)
-                    timer();
-                });
             }
             else {
                 alarmPage();

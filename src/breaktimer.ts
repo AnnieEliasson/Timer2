@@ -6,7 +6,7 @@ export function breakTimer() {
     console.log('breaktimer');
 
 
-    let breakMinutes = 1;
+    let breakMinutes = 5;
     let breakSeconds = breakMinutes * 60;
 
     const breakCountdown = setInterval(()=>{

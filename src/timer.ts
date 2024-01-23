@@ -51,10 +51,7 @@ export function timer(){
       
 
       breakTimer();
-      breakBtn.addEventListener('click', ()=>{
-        //clearTimeout(breakTimer)
-        timer()
-      })
+
     } else{
       alarmPage()
       clearInterval(timerInterval);

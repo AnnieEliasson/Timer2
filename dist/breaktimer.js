@@ -3,7 +3,7 @@ const breakBtn = document.querySelector(".break-btn");
 const displayBreakTime = document.querySelector(".break-countdown");
 export function breakTimer() {
     console.log('breaktimer');
-    let breakMinutes = 1;
+    let breakMinutes = 5;
     let breakSeconds = breakMinutes * 60;
     const breakCountdown = setInterval(() => {
         breakSeconds--;
