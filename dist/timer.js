@@ -16,16 +16,15 @@ abortBtn.addEventListener('click', () => {
 });
 export function timer() {
     breakScreen.style.display = "none";
-    var timeLimitInMinutes = minutes;
-    var timeLimitInSeconds = timeLimitInMinutes * 60;
+    let timeLimitInMinutes = minutes;
+    let timeLimitInSeconds = timeLimitInMinutes * 60;
     function startTimer() {
         timeLimitInSeconds--;
-        var minutes = Math.floor(timeLimitInSeconds / 60);
-        var seconds = timeLimitInSeconds % 60;
+        let minutes = Math.floor(timeLimitInSeconds / 60);
+        let seconds = timeLimitInSeconds % 60;
         if (abort === true) {
             abort = false;
             clearInterval(timerInterval);
-            //viewTimePage.style.display = "none";
         }
         if (timeLimitInSeconds === 0) {
             if (intervalBox.checked) {
@@ -36,7 +35,6 @@ export function timer() {
                 clearInterval(timerInterval);
                 console.log("break");
                 breakScreen.style.display = "flex";
-                //const breakTimer = setTimeout(timer, 3000)
                 breakTimer();
             }
             else {

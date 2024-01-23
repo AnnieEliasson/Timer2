@@ -6,14 +6,14 @@ export function breakTimer() {
     console.log('breaktimer');
 
 
-    let breakMinutes = 5;
-    let breakSeconds = breakMinutes * 60;
+    let breakMinutes: number = 5;
+    let breakSeconds: number = breakMinutes * 60;
 
-    const breakCountdown = setInterval(()=>{
+    const breakCountdown: number = setInterval(()=>{
 
         breakSeconds -- ;
-        const minutes = Math.floor(breakSeconds / 60);
-        const seconds = breakSeconds % 60;
+        const minutes: number = Math.floor(breakSeconds / 60);
+        const seconds: number = breakSeconds % 60;
 
         console.log(`${minutes} : ${seconds}`)
 
@@ -31,10 +31,5 @@ export function breakTimer() {
       })
 
 
-    
-    
-
-
-    
 }
 

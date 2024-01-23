@@ -3,7 +3,7 @@ import { alarmPage } from "./alarmpage.js";
 import {breakTimer} from "./breaktimer.js";
 
 const breakScreen = document.querySelector(".break") as HTMLElement
-let abort = false;
+let abort: boolean = false;
 export const viewTimePage = document.querySelector(".view-time-page") as HTMLElement
 const intervalBox = document.getElementById("intervals") as HTMLInputElement
 const breakBox = document.getElementById("break") as HTMLInputElement
@@ -21,19 +21,18 @@ abortBtn.addEventListener('click', ()=>{
 
 export function timer(){
     breakScreen.style.display= "none";
-    var timeLimitInMinutes = minutes;
-    var timeLimitInSeconds = timeLimitInMinutes * 60;
+    let timeLimitInMinutes: number = minutes;
+    let timeLimitInSeconds: number = timeLimitInMinutes * 60;
     
   function startTimer() {
   timeLimitInSeconds--;
-  var minutes = Math.floor(timeLimitInSeconds / 60);
-  var seconds = timeLimitInSeconds % 60;
+  let minutes: number = Math.floor(timeLimitInSeconds / 60);
+  let seconds: number = timeLimitInSeconds % 60;
   
   
   if (abort === true){
     abort = false;
     clearInterval(timerInterval);
-    //viewTimePage.style.display = "none";
 
   }
   
@@ -46,10 +45,7 @@ export function timer(){
       clearInterval(timerInterval);
       console.log("break")
       breakScreen.style.display = "flex"
-  
-      //const breakTimer = setTimeout(timer, 3000)
       
-
       breakTimer();
 
     } else{

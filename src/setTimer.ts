@@ -9,7 +9,7 @@ export const setTimerPage = document.querySelector(".set-timer-page") as HTMLEle
 export let minutes: number = 10;
 
 
-export function setTimer(){
+export function setTimer(): void{
 leftBtn.addEventListener('click', ()=>{
     minutes --
     displayMinutes.innerHTML = minutes.toString()    
@@ -23,11 +23,6 @@ rightBtn.addEventListener('click', ()=>{
 startBtn.addEventListener('click', ()=>{
     setTimerPage.style.transform = "translateY(-100%)"
     viewTimePage.style.transform = "translateY(0)"
-    //viewTimePage.classList.add('slide-up') 
-
-    //viewTimePage.style.display = "flex"
-    
-
     
     timer();
 } )

@@ -18,8 +18,6 @@ export function setTimer() {
     startBtn.addEventListener('click', () => {
         setTimerPage.style.transform = "translateY(-100%)";
         viewTimePage.style.transform = "translateY(0)";
-        //viewTimePage.classList.add('slide-up') 
-        //viewTimePage.style.display = "flex"
         timer();
     });
 }
