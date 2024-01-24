@@ -11,12 +11,15 @@ const breakBtn = document.querySelector(".break-btn") as HTMLElement
 const timerElement = document.getElementById('time-display')as HTMLElement
 const abortBtn = document.querySelector(".abort-btn") as HTMLElement
 
+
 abortBtn.addEventListener('click', ()=>{
     abort = true;
 
     setTimerPage.style.transform = "translateY(0)"
     viewTimePage.style.transform = "translateY(100%)"
   })
+
+
 
 
 export function timer(){

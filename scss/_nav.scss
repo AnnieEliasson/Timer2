@@ -1,0 +1,46 @@
+.nav {
+    width: 100%;
+    height: 40px;
+    @include flex-col-center-center;
+    position: absolute;
+    top: 0;
+    
+    h1{
+        font-size: 1.6rem;
+        color: $text-color-dark;
+    }
+
+    .logo-small{
+        width: 30px;
+        height: 30px;
+        display: grid;
+        grid-template-rows: 4fr 3fr 2fr 1fr;
+        gap: 2px;
+        margin: 7px;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+        
+
+        div{
+            height: 100%;
+            background-color: $text-color-dark;
+        }
+
+        div{
+            height: 100%;
+            background-color: $text-color-dark;
+        }
+
+        div{
+            height: 100%;
+            background-color: $text-color-dark;
+        }
+
+        div{
+            height: 100%;
+            background-color: $text-color-dark;
+        }
+
+    }
+}

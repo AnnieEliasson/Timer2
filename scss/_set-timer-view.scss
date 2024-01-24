@@ -1,11 +1,11 @@
 .set-timer-page {
     width: 100%;
     height: 100%;
-    background-color: $grey5;
+    background-color: $light-grey;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: $text-color;
+    color: $text-color-dark;
     transition: transform 0.7s;
 
 

@@ -1,0 +1,39 @@
+.menu{
+    @include fill-position-screen;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $menu-bg-color;
+
+    .nav{
+        color: $text-color;
+        
+        .logo-small{
+            div{
+                background-color: $text-color;
+            }
+        }
+
+        h1{
+            color: $text-color;
+        }
+    }
+    
+    
+    ul{
+        list-style: none;
+        gap: 20px;
+        font-size: 2rem;
+        color: $text-color;
+        margin-top: 100px;
+
+        li{
+            margin: 20px 0;
+        }
+    }
+}
+
+.show{
+    display: flex;
+}
