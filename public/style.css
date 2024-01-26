@@ -66,6 +66,9 @@
 .set-timer-page .set-timer .right-arrow {
   cursor: pointer;
   margin: 20px;
+  border: 0;
+  font-size: 4rem;
+  background-color: rgb(232, 230, 230);
 }
 .set-timer-page .checkboxes {
   margin-top: 100px;

@@ -7,7 +7,6 @@ let abort: boolean = false;
 export const viewTimePage = document.querySelector(".view-time-page") as HTMLElement
 const intervalBox = document.getElementById("intervals") as HTMLInputElement
 const breakBox = document.getElementById("break") as HTMLInputElement
-const breakBtn = document.querySelector(".break-btn") as HTMLElement
 const timerElement = document.getElementById('time-display')as HTMLElement
 const abortBtn = document.querySelector(".abort-btn") as HTMLElement
 

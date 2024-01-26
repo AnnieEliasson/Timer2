@@ -12,6 +12,10 @@ export let minutes: number = 10;
 export function setTimer(): void{
 leftBtn.addEventListener('click', ()=>{
     minutes --
+
+    if(minutes < 1){
+        minutes = 1;
+    }
     displayMinutes.innerHTML = minutes.toString()    
 })
 

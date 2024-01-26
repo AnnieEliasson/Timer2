@@ -1,6 +1,7 @@
-export const loadingscreen = document.querySelector(".loadingscreen");
+const loadingscreen = document.querySelector(".loadingscreen");
+const logo = document.querySelector(".logo");
 export function loading() {
-    loadingscreen.addEventListener('click', () => {
+    logo.addEventListener('click', () => {
         loadingscreen.style.transform = "translateX(-100%)";
     });
 }

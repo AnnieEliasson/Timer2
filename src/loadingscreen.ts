@@ -1,8 +1,9 @@
-export const loadingscreen = document.querySelector(".loadingscreen") as HTMLElement
-
+const loadingscreen = document.querySelector(".loadingscreen") as HTMLElement
+const logo = document.querySelector(".logo")
 
 export function loading() : void{
-loadingscreen.addEventListener('click', ()=>{
-    loadingscreen.style.transform = "translateX(-100%)"
-})
+
+    logo.addEventListener('click', ()=>{
+        loadingscreen.style.transform = "translateX(-100%)"
+    })
 }

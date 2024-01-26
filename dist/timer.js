@@ -6,7 +6,6 @@ let abort = false;
 export const viewTimePage = document.querySelector(".view-time-page");
 const intervalBox = document.getElementById("intervals");
 const breakBox = document.getElementById("break");
-const breakBtn = document.querySelector(".break-btn");
 const timerElement = document.getElementById('time-display');
 const abortBtn = document.querySelector(".abort-btn");
 abortBtn.addEventListener('click', () => {
