@@ -6,6 +6,7 @@ const startBtn = document.querySelector(".start-btn");
 const viewTimePage = document.querySelector(".view-time-page");
 export const setTimerPage = document.querySelector(".set-timer-page");
 export let minutes = 10;
+// ställ in timer
 export function setTimer() {
     leftBtn.addEventListener('click', () => {
         minutes--;
@@ -18,6 +19,7 @@ export function setTimer() {
         minutes++;
         displayMinutes.innerHTML = minutes.toString();
     });
+    // starta timer
     startBtn.addEventListener('click', () => {
         setTimerPage.style.transform = "translateY(-100%)";
         viewTimePage.style.transform = "translateY(0)";

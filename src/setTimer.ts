@@ -8,7 +8,7 @@ const viewTimePage = document.querySelector(".view-time-page") as HTMLElement
 export const setTimerPage = document.querySelector(".set-timer-page") as HTMLElement
 export let minutes: number = 10;
 
-
+// ställ in timer
 export function setTimer(): void{
 leftBtn.addEventListener('click', ()=>{
     minutes --
@@ -24,6 +24,8 @@ rightBtn.addEventListener('click', ()=>{
     displayMinutes.innerHTML = minutes.toString()
 })
 
+
+// starta timer
 startBtn.addEventListener('click', ()=>{
     setTimerPage.style.transform = "translateY(-100%)"
     viewTimePage.style.transform = "translateY(0)"

@@ -1,6 +1,7 @@
 import {  minutes, setTimerPage } from "./setTimer.js";
 import { alarmPage } from "./alarmpage.js";
 import {breakTimer} from "./breaktimer.js";
+import { analogPage } from "./menu.js";
 
 const breakScreen = document.querySelector(".break") as HTMLElement
 let abort: boolean = false;
@@ -8,23 +9,31 @@ export const viewTimePage = document.querySelector(".view-time-page") as HTMLEle
 const intervalBox = document.getElementById("intervals") as HTMLInputElement
 const breakBox = document.getElementById("break") as HTMLInputElement
 const timerElement = document.getElementById('time-display')as HTMLElement
-const abortBtn = document.querySelector(".abort-btn") as HTMLElement
+const abortBtn = document.querySelectorAll(".abort-btn")
 
+const second = document.querySelector(".second") as HTMLElement
+const minute = document.querySelector(".minute") as HTMLElement
 
-abortBtn.addEventListener('click', ()=>{
+// abort knappar. ta bort klockor och visa set time sidan
+abortBtn.forEach(btn => {
+  btn.addEventListener('click', ()=>{
     abort = true;
 
     setTimerPage.style.transform = "translateY(0)"
     viewTimePage.style.transform = "translateY(100%)"
+    analogPage.style.display = "none"
+    
   })
+});
 
-
-
-
+// countdown
 export function timer(){
     breakScreen.style.display= "none";
     let timeLimitInMinutes: number = minutes;
     let timeLimitInSeconds: number = timeLimitInMinutes * 60;
+
+    let tick = 0;
+    let tickMin = minutes * 6;
     
   function startTimer() {
   timeLimitInSeconds--;
@@ -57,9 +66,23 @@ export function timer(){
       
   }
   
+
+  // Digital
   timerElement.textContent = minutes + ':' + seconds;
+
+
+  // Analog
+  tick = tick - 6;
+  if(tick === -360){
+    tick = 0;
+    tickMin = tickMin - 6;
+  }
+
+  second.style.transform = `rotate(${tick}deg)`;
+  minute.style.transform = `rotate(${tickMin}deg)`;
   
   }
+
   var timerInterval = setInterval(startTimer, 1000);
   }
  
